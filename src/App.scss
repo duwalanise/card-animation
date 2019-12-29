@@ -1,0 +1,38 @@
+.bj-board {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(116, 20, 147);
+  background: radial-gradient(
+    circle,
+    rgba(116, 20, 147, 1) 0%,
+    rgba(75, 7, 115, 1) 100%
+  );
+  display: flex;
+  position: relative;
+  .deck-cards,
+  .deck-provider {
+    position: absolute;
+    top: 5%;
+    right: 5vw;
+  }
+  .deck-provider,
+  .deck-cards,
+  .deck-collector {
+    > img {
+      height: 100px;
+      width: auto;
+    }
+  }
+  .deck-collector {
+    position: absolute;
+    top: 5%;
+    left: 5vw;
+  }
+  .bj-actions {
+    position: absolute;
+    display: flex;
+    bottom: 10vh;
+    width: 100%;
+    justify-content: center;
+  }
+}
