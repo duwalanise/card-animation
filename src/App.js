@@ -35,7 +35,19 @@ const App = () => {
           <Coin value="40" />
           <Coin value="50" />
         </div>
-        <Actions />
+        <Actions
+          onDeal={() => {
+            setEnd(false);
+            setUserCards(userCard.concat(1));
+          }}
+          onClear={() => {
+            setEnd(true);
+            setTimeout(() => {
+              setUserCards([]);
+              setDealerCards([]);
+            }, 300);
+          }}
+        />
       </div>
     </div>
   );

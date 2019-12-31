@@ -11,18 +11,19 @@ const Actions = ({
   onDeal,
   onBet,
   onRebet,
+  onClear,
 }) => {
   if (hasStarted) {
     return (
       <div className="actions-wrapper">
         <span role="img" onClick={onHit} aria-label="Hit">
-          &#10010;
+          <span className="inner">+</span>
         </span>
         <span role="img" onClick={onStand} aria-label="Stand">
-          &#9995;
+          <span className="inner">&#9995;</span>
         </span>
         <span role="img" onClick={onDouble} aria-label="Double">
-          x2
+          <span className="inner">x2</span>
         </span>
       </div>
     );
@@ -31,10 +32,10 @@ const Actions = ({
     return (
       <div className="actions-wrapper">
         <span role="img" onClick={onBet} aria-label="New Bet">
-          &#10010;
+          <span className="inner">+</span>
         </span>
         <span role="img" onClick={onRebet} aria-label="Rebet">
-          &#8634;
+          <span className="inner">&#8634;</span>
         </span>
       </div>
     );
@@ -44,20 +45,8 @@ const Actions = ({
       <span role="img" onClick={onDeal} aria-label="Deal">
         <span className="inner">$</span>
       </span>
-      <span role="img" onClick={onBet} aria-label="New Bet">
-        <span className="inner">+</span>
-      </span>
-      <span role="img" onClick={onRebet} aria-label="Rebet">
-        <span className="inner">&#8634;</span>
-      </span>
-      <span role="img" onClick={onHit} aria-label="Hit">
-        <span className="inner">+</span>
-      </span>
-      <span role="img" onClick={onStand} aria-label="Stand">
-        <span className="inner">&#9995;</span>
-      </span>
-      <span role="img" onClick={onDouble} aria-label="Double">
-        <span className="inner">x2</span>
+      <span role="img" onClick={onClear} aria-label="Deal">
+        <span className="inner">X</span>
       </span>
     </div>
   );
