@@ -42,22 +42,22 @@ const Actions = ({
   return (
     <div className="actions-wrapper">
       <span role="img" onClick={onDeal} aria-label="Deal">
-        $
+        <span className="inner">$</span>
       </span>
       <span role="img" onClick={onBet} aria-label="New Bet">
-        +
+        <span className="inner">+</span>
       </span>
       <span role="img" onClick={onRebet} aria-label="Rebet">
-        &#8634;
+        <span className="inner">&#8634;</span>
       </span>
       <span role="img" onClick={onHit} aria-label="Hit">
-        +
+        <span className="inner">+</span>
       </span>
       <span role="img" onClick={onStand} aria-label="Stand">
-        &#9995;
+        <span className="inner">&#9995;</span>
       </span>
       <span role="img" onClick={onDouble} aria-label="Double">
-        x2
+        <span className="inner">x2</span>
       </span>
     </div>
   );

@@ -13,26 +13,28 @@ const App = () => {
   const [end, setEnd] = useState(false);
   return (
     <div className="bj-board">
-      <div className="deck-provider">
-        <img src={deckImage} alt="" />
+      <div className="bj-image">
+        <div className="deck-provider">
+          <img src={deckImage} alt="" />
+        </div>
+        {dealerCard.map((card, idx) => (
+          <CardComponent key={idx} shift={idx * 2} end={end} cardFor="dealer" />
+        ))}
+        {userCard.map((card, idx) => (
+          <CardComponent key={idx} shift={idx * 2} end={end} cardFor="user" />
+        ))}
+        <div className="deck-collector">
+          <img src={deckImage} alt="" />
+        </div>
+        <div className="coin-wrapper">
+          <Coin value="10" />
+          <Coin value="20" />
+          <Coin value="30" />
+          <Coin value="40" />
+          <Coin value="50" />
+        </div>
+        <Actions />
       </div>
-      {dealerCard.map((card, idx) => (
-        <CardComponent key={idx} shift={idx} end={end} cardFor="dealer" />
-      ))}
-      {userCard.map((card, idx) => (
-        <CardComponent key={idx} shift={idx} end={end} cardFor="user" />
-      ))}
-      <div className="deck-collector">
-        <img src={deckImage} alt="" />
-      </div>
-      <div className="coin-wrapper">
-        <Coin value="10" />
-        <Coin value="20" />
-        <Coin value="30" />
-        <Coin value="40" />
-        <Coin value="50" />
-      </div>
-      <Actions />
     </div>
   );
 };
