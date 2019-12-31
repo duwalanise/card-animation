@@ -6,6 +6,7 @@ import './App.scss';
 
 import deckImage from './images/deck.png';
 import Actions from './components/actions';
+import IconLogo from './images/icon_logo.svg';
 
 const App = () => {
   const [userCard, setUserCards] = useState([1, 1]);
@@ -17,6 +18,7 @@ const App = () => {
         <div className="deck-provider">
           <img src={deckImage} alt="" />
         </div>
+        <img className="icon-logo" src={IconLogo} alt="" />
         {dealerCard.map((card, idx) => (
           <CardComponent key={idx} shift={idx * 2} end={end} cardFor="dealer" />
         ))}

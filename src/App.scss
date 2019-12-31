@@ -12,6 +12,13 @@
     background-image: url('./images/tabletop.png');
     display: flex;
     position: relative;
+    .icon-logo {
+      opacity: 0.3;
+      position: absolute;
+      height: 100px;
+      bottom: 50vh;
+      right: 35vw;
+    }
     .deck-cards,
     .deck-provider {
       position: absolute;
