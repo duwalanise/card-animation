@@ -3,10 +3,10 @@ import { useSpring, animated } from 'react-spring';
 
 import card from '../images/AS.png';
 
-const Card = ({ shift, end }) => {
+const Card = ({ shift, end, cardFor }) => {
   const { xys } = useSpring({
     from: { xys: [0, 0, 1] },
-    xys: end ? [-85, 0, 1] : [-50 + shift, 50, 1],
+    xys: end ? [-85, 0, 1] : [-50 + shift, cardFor === 'dealer' ? 10 : 50, 1],
   });
   return (
     <animated.div
