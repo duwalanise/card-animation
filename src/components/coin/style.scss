@@ -46,39 +46,45 @@
     }
   }
 }
-
-.coin {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  &:hover {
-    .front {
-      animation-name: spin;
-      animation-duration: 1.5s;
-      animation-iteration-count: 0;
-      animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-      animation-iteration-count: infinite;
+.coin-wrapper {
+  position: absolute;
+  bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .coin {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    &:hover {
+      .front {
+        animation-name: spin;
+        animation-duration: 1.5s;
+        animation-iteration-count: 0;
+        animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+        animation-iteration-count: infinite;
+      }
     }
+    ._10 {
+      @include content(#2e7745, #294e31);
+    }
+    ._20 {
+      @include content(#851015, #391112);
+    }
+    ._30 {
+      @include content(#461c59, #36233f);
+    }
+    ._40 {
+      @include content(#0d216b, #1f274a);
+    }
+    ._50 {
+      @include content(#121213, #100f13);
+    }
+    // transform: rotate3d(1, 1, 0, 40deg);
   }
-  ._10 {
-    @include content(#2e7745, #294e31);
-  }
-  ._20 {
-    @include content(#851015, #391112);
-  }
-  ._30 {
-    @include content(#461c59, #36233f);
-  }
-  ._40 {
-    @include content(#0d216b, #1f274a);
-  }
-  ._50 {
-    @include content(#121213, #100f13);
-  }
-  // transform: rotate3d(1, 1, 0, 40deg);
 }
 
 @keyframes spin {

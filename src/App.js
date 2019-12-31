@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import CardComponent from './components/card';
+import CardComponent from './components/card/index';
 import Coin from './components/coin/index';
 import './App.scss';
 
 import deckImage from './images/deck.png';
-import card from './images/AS.png';
+import Actions from './components/actions';
 
 const App = () => {
   const [userCard, setUserCards] = useState([1, 1]);
@@ -25,33 +25,14 @@ const App = () => {
       <div className="deck-collector">
         <img src={deckImage} alt="" />
       </div>
-      <div className="bj-actions">
+      <div className="coin-wrapper">
         <Coin value="10" />
         <Coin value="20" />
         <Coin value="30" />
         <Coin value="40" />
         <Coin value="50" />
-        <button
-          onClick={() => {
-            setUserCards(userCard.concat([1]));
-            setDealerCards(dealerCard.concat([1]));
-            setEnd(false);
-          }}
-        >
-          Hit
-        </button>
-        <button
-          onClick={() => {
-            setEnd(true);
-            setTimeout(() => {
-              setUserCards([]);
-              setDealerCards([]);
-            }, 300);
-          }}
-        >
-          Clear
-        </button>
       </div>
+      <Actions />
     </div>
   );
 };
