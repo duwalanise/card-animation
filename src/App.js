@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
 import CardComponent from './components/card/index';
 import Coin from './components/coin/index';
 import './App.scss';

@@ -20,7 +20,7 @@ const Actions = ({
           <span className="inner">+</span>
         </span>
         <span role="img" onClick={onStand} aria-label="Stand">
-          <span className="inner">&#9995;</span>
+          <span className="inner" role="img" aria-label="">&#9995;</span>
         </span>
         <span role="img" onClick={onDouble} aria-label="Double">
           <span className="inner">x2</span>
@@ -35,7 +35,7 @@ const Actions = ({
           <span className="inner">+</span>
         </span>
         <span role="img" onClick={onRebet} aria-label="Rebet">
-          <span className="inner">&#8634;</span>
+          <span className="inner" role="img" aria-label="">&#8634;</span>
         </span>
       </div>
     );
